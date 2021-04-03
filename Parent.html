@@ -55,17 +55,17 @@
     <script type="text/javascript">
         var popup;
         function OpenPopup() {
-            popup = window.open("Popup.html", "Popup", "width=300,height=100");
-            //popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
+            //popup = window.open("Popup.html", "Popup", "width=300,height=100");
+            popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
         };
         function SendToPopup() {
             if (popup != null && !popup.closed) {
-                var lblFirstName = popup.document.getElementById("lblFirstName");
-                var lblLastName = popup.document.getElementById("lblLastName");
-                //var Q1 = popup.document.getElementById('<%=txtMaThe.ClientID%>');
+                //var lblFirstName = popup.document.getElementById("lblFirstName");
+                //var lblLastName = popup.document.getElementById("lblLastName");
+                var Q1 = popup.document.getElementById("<%=txtMaThe.ClientID%>");
                 
-                lblFirstName.innerHTML = document.getElementById("txtFirstName").value;
-                lblLastName.innerHTML = document.getElementById("txtLastName").value;
+                //lblFirstName.innerHTML = document.getElementById("txtFirstName").value;
+                //lblLastName.innerHTML = document.getElementById("txtLastName").value;
                 //Q1.value = document.getElementById("txtLastName").value;
                 //alert(Q1.value);
                 //popup.document.write("Hello, world!");
