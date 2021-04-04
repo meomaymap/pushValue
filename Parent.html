@@ -55,8 +55,8 @@
     <script type="text/javascript">
         var popup;
         function OpenPopup() {
-            //popup = window.open("Popup.html", "Popup", "width=300,height=100");
-            popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
+            popup = window.open("Popup.html", "Popup", "width=300,height=100");
+            //popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
         };
         function SendToPopup() {
             if (popup != null && !popup.closed) {
@@ -68,8 +68,8 @@
                 //lblLastName.innerHTML = document.getElementById("txtLastName").value;
                 //Q1.value = document.getElementById("txtLastName").value;
                 //alert(Q1.value);
-                //popup.document.write("Hello, world!");
-                popup.focus();
+                popup.document.write("Hello, world!");
+                //popup.focus();
             } else {
                 alert("Popup has been closed.");
             }
