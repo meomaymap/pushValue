@@ -56,7 +56,24 @@
         var popup;
         function OpenPopup() {
             //popup = window.open("Popup.html", "Popup", "width=300,height=100");
-            popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
+            //popup = window.open("https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx", "Popup", "width=300,height=100");
+            
+            $(document).ready(function () {
+   // create the request here, 
+   $.ajax({
+      url: 'https://baohiemxahoi.gov.vn/tracuu/Pages/tra-cuu-thoi-han-su-dung-the-bhyt.aspx',
+      success: function (data) {
+         /* upon success, 
+          * chances are that entire HTML will be passed down, 
+          * do not worry about any return statements, the document will be sent
+          * down into the data variable here.. 
+          */
+         $('.pop-up').html(data);
+         // Show the pop up, 
+         $('.pop-up').show();
+      }
+   });
+});
         };
         function SendToPopup() {
             if (popup != null && !popup.closed) {
